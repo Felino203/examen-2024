@@ -70,7 +70,17 @@ function createTree(string, height = 36) {
 }
 
 function randomChalkColor() {
-	return Math.random() * 100 > 50 ? chalk.green : chalk.red;
+	const value = Math.random() * 100;
+	if (value < 25) {
+		return chalk.green;
+	}
+	if (value < 50) {
+		return chalk.red;
+	}
+	if (value < 75) {
+		return chalk.yellow;
+	}
+	return chalk.blue;
 }
 
 // Tu peut rouler se script avec "npm start". Tu peux aussi t'amuser a changer le input de ici dessous avec un autre txt file et hauteur pour voir le resultat.
