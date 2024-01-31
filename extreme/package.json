@@ -1,0 +1,10 @@
+{
+  "name": "tree",
+  "version": "1.0.0",
+  "description": "Vous vous êtes fait contacter par le Père Nowel pour créer un programme qui imprime des sapins pour remédier à la déforestation de son environnement. Toutefois, il veut dissimuler le code dans la forme d’un sapin pour le camoufler.",
+  "main": "tree.js",
+  "scripts": {
+    "start": "node tree.js"
+  },
+  "author": "Félix Noël"
+}
