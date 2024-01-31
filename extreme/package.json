@@ -6,5 +6,9 @@
   "scripts": {
     "start": "node tree.js"
   },
-  "author": "Félix Noël"
+  "author": "Félix Noël",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  },
+  "type": "module"
 }

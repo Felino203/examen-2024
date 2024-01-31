@@ -1,4 +1,5 @@
-const fs = require("fs");
+import chalk from "chalk";
+import fs from "fs";
 
 function readJSFileSync(filePath) {
 	try {
@@ -59,8 +60,18 @@ function createTree(string, height = 36) {
 		}
 	});
 
-	return tree;
+	return tree
+		.join("")
+		.split("")
+		.map((char) => {
+			return randomChalkColor()(char);
+		})
+		.join("");
+}
+
+function randomChalkColor() {
+	return Math.random() * 100 > 50 ? chalk.green : chalk.red;
 }
 
 // Tu peut rouler se script avec "npm start". Tu peux aussi t'amuser a changer le input de ici dessous avec un autre txt file et hauteur pour voir le resultat.
-console.log(createTree(readJSFileSync("tree.js"), (height = 36)));
+console.log(createTree(readJSFileSync("tree.js"), 36));
